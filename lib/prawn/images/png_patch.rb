@@ -19,7 +19,7 @@ module Prawn
 
       private
 
-      def unfilter_image_data
+      def split_image_data
         img = Magick::Image.from_blob(@prawn_fast_png_data).first
         # image blob not needed anymore, let GC take care of it
         @prawn_fast_png_data = nil
